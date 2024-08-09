@@ -6,7 +6,7 @@ def send_message():
     data = {
         "msgtype": "text",
         "text": {
-            "content": "abc很好"
+            "content": "dingyuanying2004"
         }
     }
 
