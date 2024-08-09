@@ -2,7 +2,7 @@ name: Send message
 
 on:
   schedule:
-    - cron: '*/5 * * * *'  # 每5分钟运行一次
+    - cron: '0 * * * *'
   workflow_dispatch:  # 手动触发
 
 jobs:
