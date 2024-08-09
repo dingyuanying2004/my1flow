@@ -1,0 +1,25 @@
+name: Send message
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'  # 每5分钟运行一次
+  workflow_dispatch:  # 手动触发
+
+jobs:
+  send-message:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'  # 使用 Python 3.x
+
+    - name: Install requests
+      run: pip install requests
+
+    - name: Run Python script
+      run: python send_message.py
